@@ -7,7 +7,7 @@ import remarkToc from 'remark-toc';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://astorlearn.vercel.app',
 	integrations: [mdx(), sitemap()],
 	markdown: {
     remarkPlugins: [remarkToc],
