@@ -8,7 +8,9 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description='我的技术博客', pubDate, updatedDate, heroImage } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
 ---
 
 <html lang="en">

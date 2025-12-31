@@ -6,43 +6,171 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 2rem;
+			}
+			.hero {
+				text-align: center;
+				padding: 3rem 0;
+			}
+			.hero h1 {
+				font-size: 3rem;
+				background: linear-gradient(135deg, #61dafb 0%, #764abc 50%, #f14668 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				margin-bottom: 1rem;
+			}
+			.hero p {
+				font-size: 1.25rem;
+				color: #666;
+				max-width: 600px;
+				margin: 0 auto;
+			}
+			.features {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1.5rem;
+				margin: 3rem 0;
+			}
+			.feature-card {
+				background: linear-gradient(145deg, #f8f9fa, #ffffff);
+				border: 1px solid #eee;
+				border-radius: 12px;
+				padding: 1.5rem;
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+			.feature-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+			}
+			.feature-card h3 {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				font-size: 1.25rem;
+				margin-bottom: 0.75rem;
+			}
+			.feature-card p {
+				color: #666;
+				line-height: 1.6;
+			}
+			.icon-router { color: #ca4245; }
+			.icon-redux { color: #764abc; }
+			.icon-hooks { color: #61dafb; }
+			.cta {
+				text-align: center;
+				padding: 2rem 0;
+			}
+			.cta-button {
+				display: inline-block;
+				background: linear-gradient(135deg, #61dafb, #764abc);
+				color: white;
+				padding: 1rem 2.5rem;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 1.1rem;
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+			.cta-button:hover {
+				transform: scale(1.05);
+				box-shadow: 0 4px 16px rgba(97, 218, 251, 0.4);
+			}
+			.tech-stack {
+				display: flex;
+				justify-content: center;
+				gap: 2rem;
+				flex-wrap: wrap;
+				margin: 2rem 0;
+				padding: 1.5rem;
+				background: #f8f9fa;
+				border-radius: 12px;
+			}
+			.tech-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.5rem;
+			}
+			.tech-item span {
+				font-size: 2rem;
+			}
+			.tech-item small {
+				color: #666;
+				font-weight: 500;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<h1>⚛️ React 全家桶学习指南</h1>
+				<p>
+					系统学习 React 生态系统的核心技术栈，包括路由管理、状态管理和 Hooks，
+					助你成为全栈 React 开发者。
+				</p>
+			</section>
+
+			<section class="tech-stack">
+				<div class="tech-item">
+					<span>⚛️</span>
+					<small>React 18</small>
+				</div>
+				<div class="tech-item">
+					<span>🛣️</span>
+					<small>React Router</small>
+				</div>
+				<div class="tech-item">
+					<span>🗃️</span>
+					<small>Redux Toolkit</small>
+				</div>
+				<div class="tech-item">
+					<span>🪝</span>
+					<small>React Hooks</small>
+				</div>
+				<div class="tech-item">
+					<span>📘</span>
+					<small>TypeScript</small>
+				</div>
+			</section>
+
+			<section class="features">
+				<div class="feature-card">
+					<h3><span class="icon-router">🛣️</span> React Router</h3>
+					<p>
+						学习 React Router v6 的核心概念，包括路由配置、嵌套路由、
+						动态路由、路由守卫和数据加载等，构建复杂的单页应用。
+					</p>
+				</div>
+
+				<div class="feature-card">
+					<h3><span class="icon-redux">🗃️</span> Redux Toolkit</h3>
+					<p>
+						掌握 Redux Toolkit 的使用，包括 createSlice、createAsyncThunk
+						和 RTK Query，轻松实现全局状态管理和 API 数据获取。
+					</p>
+				</div>
+
+				<div class="feature-card">
+					<h3><span class="icon-hooks">🪝</span> React Hooks</h3>
+					<p>
+						深入理解 useState、useEffect、useContext、useReducer、
+						useMemo、useCallback 等核心 Hooks，以及自定义 Hooks 的开发。
+					</p>
+				</div>
+			</section>
+
+			<section class="cta">
+				<a href="/blog" class="cta-button">📚 开始学习</a>
+			</section>
 		</main>
 		<Footer />
 	</body>
